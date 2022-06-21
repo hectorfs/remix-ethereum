@@ -1,0 +1,89 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "mensajeParaGuardar",
+						"type": "string"
+					}
+				],
+				"name": "guardarMensaje",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "verMensajeGuardado",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "autor",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "mensaje",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fecha",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Grafiti.Mensaje",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/7_Grafiti_por_minuto.sol": "Grafiti"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/7_Grafiti_por_minuto.sol": {
+			"keccak256": "0xb397961b63c24909c7b3ec8041b5ef69f84f559b4bbcf65e48787509cc6d3907",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://84e01bf42bc98050e0b9f7be35d354ab4acb3d8f5483b54bd19ee62f3a6d9b65",
+				"dweb:/ipfs/QmNnda7oUjgt58jjNMLK4M3vdHV1gwWbFE1GZjyddQunKK"
+			]
+		}
+	},
+	"version": 1
+}

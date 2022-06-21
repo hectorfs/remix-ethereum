@@ -1,0 +1,118 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "NotaAgregada",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "materia",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "alumno",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nota",
+						"type": "uint256"
+					}
+				],
+				"name": "agregarNota",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "alumno",
+						"type": "address"
+					}
+				],
+				"name": "calcularPromedio",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/8_Instituto.sol": "InstitutoDesafio"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/8_Instituto.sol": {
+			"keccak256": "0x204fb16fe910aaa2228d718b680482403d3920f8268bd0f480a5c6f4bbd66e7d",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://9c214ab40ea628b2bb77997d3f1fc2a66ff978b38cdae46c8997248f5300b183",
+				"dweb:/ipfs/QmULHfuYS7Q84YYcderE37CDywUzeCmUAHdWAqKidwLsrT"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,84 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "guardar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "leer",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "ultimoNumero",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "acumulador",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Desafio.Valor",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/5_Desafio.sol": "Desafio"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/5_Desafio.sol": {
+			"keccak256": "0x7990b3b52ce4ec463a914b06eac66d6f2dbf2b316bdd7bfc5f595418b0b39efb",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://c19a74d21a475dff01e5f1b459523103e0f1249a091b27b0136b498a2c175f54",
+				"dweb:/ipfs/QmcfjTJcuPw4H8FWjciW9LK41aGp7Ri2Y8ACrNskCP9bdA"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,71 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "verLog",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "visitar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/6_LogVisitas.sol": "LogVisitas"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/6_LogVisitas.sol": {
+			"keccak256": "0x67929bdfd040ec935c321df780ffb982e47191d1263a9ce1483d0797f8e00661",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://ba948ab0151feac6bcfc901d5dc4bec68c7a31e7755d4c4bbcaba901c743ce35",
+				"dweb:/ipfs/QmZArPhqMsbSaVt1nnoeZtiqLNVaFiG6ZtV8tjm1WKHke6"
+			]
+		}
+	},
+	"version": 1
+}
