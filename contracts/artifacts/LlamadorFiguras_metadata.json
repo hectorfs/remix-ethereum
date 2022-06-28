@@ -1,0 +1,73 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "contrato",
+						"type": "address"
+					}
+				],
+				"name": "verPerimetroContrato",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/12_LlamadorFiguras.sol": "LlamadorFiguras"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/12_Figura_interface.sol": {
+			"keccak256": "0xd8e0e63383d0e2533158eb31e3637586efd575114d96ee0931c31530f6e0c084",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://e9543dc5954ff3485aedf82cca206ed6d2dd5d264be8e2ec5e88ff279b00feeb",
+				"dweb:/ipfs/QmQWNWvTVyo6eFaNGq2KhDDnPXyNbA4w95jh5bHTpt6Rm2"
+			]
+		},
+		"contracts/12_LlamadorFiguras.sol": {
+			"keccak256": "0x4e8890eac544ed5f00625a72c3098cbd71a626dc4d60636e9713595d7ea45d6d",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://d432a64ae57bb41af7bc557a8046abee5c3a7f38f1cc27fc52db3a485c86c63f",
+				"dweb:/ipfs/QmXMhWzBev4CLhfW8iWZkoavYcsRarz2k6wciKWZMveeU5"
+			]
+		}
+	},
+	"version": 1
+}

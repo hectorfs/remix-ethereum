@@ -1,0 +1,75 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "apellido",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "saludo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/11_Ejecicio_Herencia.sol": "EjercicioHerencia"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/11_Ejecicio_Herencia.sol": {
+			"keccak256": "0xdea61cee51c78ceec33615e4a1f201a9e08142416bfaaa58c51bf9a60483baa8",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://f05d9fb243ec9547401a6660c88850877a09a1e385ec11e4f31f489589ea3df8",
+				"dweb:/ipfs/QmbRpgMbjk2PoQoTVbNPqjukLMhuYmrnPLtfaaLJPVgY41"
+			]
+		}
+	},
+	"version": 1
+}

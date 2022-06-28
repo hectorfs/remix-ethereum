@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "verPerimetro",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "verSuperficie",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/12_Figura_interface.sol": "IFigura"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/12_Figura_interface.sol": {
+			"keccak256": "0xd8e0e63383d0e2533158eb31e3637586efd575114d96ee0931c31530f6e0c084",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://e9543dc5954ff3485aedf82cca206ed6d2dd5d264be8e2ec5e88ff279b00feeb",
+				"dweb:/ipfs/QmQWNWvTVyo6eFaNGq2KhDDnPXyNbA4w95jh5bHTpt6Rm2"
+			]
+		}
+	},
+	"version": 1
+}
