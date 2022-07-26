@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Generar transaccion de Metamask a otra cuenta</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"></script>
+
+<body>
+
+    <div class="">
+        <h1>Generar transaccion</h1>
+        <p>Mi balance:</p>
+        <input id="txBalance" value="" style="width:400px" readonly />
+        <p>Balance destino:</p>
+        <input id="txBalanceDestino" value="" style="width:400px" readonly />
+        <p>Direccion a transferir:</p>
+        <input id="txAddress" value="" style="width:400px" />
+        <p>Monto en wei:</p>
+        <input id="txAmount" value="1" />
+        <br /> <br />
+        <input type="button" value="Enviar" onClick="enviarTransaccion()" />
+    </div>
+
+    <script>
+
+        const { ethereum } = window;
+        const b = Boolean(ethereum && ethereum.isMetaMask);
+
+        async function enviarTransaccion() {
+            // Obtener datos de la pagina
+            const direccion = document.getElementById("txAddress").value;
+            const monto = document.getElementById("txAmount").value;
+
+            // Configurar web3
+            let web3provider = window.ethereum;
+            try {
+                // Request account access
+                await web3provider.request({ method: "eth_requestAccounts" });
+            } catch (error) {
+
+                console.log(error)
+                // User denied account access...
+                console.error("User denied account access")
+            }
+
+            const web3 = new Web3(web3provider);
+
+            const accounts = await web3.eth.getAccounts();
+            const account = accounts[0];
+
+            let tokenAbi = [{ "inputs": [], "stateMutability": "nonpayable", "type": "constructor" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "owner", "type": "address" }, { "indexed": true, "internalType": "address", "name": "spender", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Approval", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "from", "type": "address" }, { "indexed": true, "internalType": "address", "name": "to", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Transfer", "type": "event" }, { "inputs": [{ "internalType": "address", "name": "owner", "type": "address" }, { "internalType": "address", "name": "spender", "type": "address" }], "name": "allowance", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function", "constant": true }, { "inputs": [{ "internalType": "address", "name": "spender", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "approve", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "account", "type": "address" }], "name": "balanceOf", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function", "constant": true }, { "inputs": [], "name": "decimals", "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }], "stateMutability": "view", "type": "function", "constant": true }, { "inputs": [{ "internalType": "address", "name": "spender", "type": "address" }, { "internalType": "uint256", "name": "subtractedValue", "type": "uint256" }], "name": "decreaseAllowance", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "spender", "type": "address" }, { "internalType": "uint256", "name": "addedValue", "type": "uint256" }], "name": "increaseAllowance", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "name", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function", "constant": true }, { "inputs": [], "name": "symbol", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function", "constant": true }, { "inputs": [], "name": "totalSupply", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function", "constant": true }, { "inputs": [{ "internalType": "address", "name": "to", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transfer", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "from", "type": "address" }, { "internalType": "address", "name": "to", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transferFrom", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "saludar", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "pure", "type": "function" }];
+
+            let tokenContract = await new web3.eth.Contract(tokenAbi, "0xCA05D6366F29F7D3a76Bb655EF8b234E9CC9Ca9d");
+
+            let result = await tokenContract.methods.transfer(direccion, monto).send({ from: account });
+
+            document.getElementById("txBalance").value = await tokenContract.methods.balanceOf(account).call();
+            document.getElementById("txBalanceDestino").value = await tokenContract.methods.balanceOf(direccion).call();
+
+            alert(await tokenContract.methods.saludar().call());
+        }
+
+    </script>
+
+</body>
+
+</html>

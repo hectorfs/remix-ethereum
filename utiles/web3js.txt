@@ -1,0 +1,37 @@
+/**
+ * ************ This is an experimental dev feature ************
+ *
+ * Ready to use variables:
+ * - web3
+ * - {varName} with the contract chosed
+ *
+ * For More info check:
+ * https://web3js.readthedocs.io/en/v1.2.2/web3-eth-contract.html#web3-eth-contract
+ *
+ * Web3 doc:
+ * https://web3js.readthedocs.io/en/v1.2.2/
+ *
+ * The value returned should be convertible to a JSON string.
+ *
+ * Feedback is welcome :)
+ */
+
+async function main() {
+  /*
+    const name = await contract.methods.name().call()
+    return name
+  */
+  /*
+  const balance = await web3.eth.getBalance("0xbaae6bb4c6d4246f75e9d5eb1a1890203a09218a");
+  console.log(balance);
+  */
+    const contractAbi = JSON.parse('[{"inputs":[],"name":"retrieve","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"num","type":"uint256"}],"name":"store","outputs":[],"stateMutability":"nonpayable","type":"function"}]');
+  
+    const contrato = new web3.eth.Contract(contractAbi, "0x73275f84a50a153b366a9550C39ecb116e75F64a");
+  
+    var direccion = (await web3.eth.getAccounts())[0];
+  
+    let result = await contrato.methods.store(10).send({from: direccion});
+  
+    console.log(result);
+}

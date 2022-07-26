@@ -1,0 +1,99 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "supply",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "nombre",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "supply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts Sergio/14_DesafioRanking.sol": "MonedaUno"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts Sergio/14_DesafioRanking.sol": {
+			"keccak256": "0xef75d1f40229029495e407d5d3959703bdb3b7537fb8713da1fd0f131b151609",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://cd78573b5e0768751b6963f73501d114d579eb95e94c2abcd6df018f08381869",
+				"dweb:/ipfs/QmbZJVpMoYQK3LSu2VwYPAyc7YLc1ySKZzj2a7XUubPx5x"
+			]
+		},
+		"contracts Sergio/2_Owner.sol": {
+			"keccak256": "0x3fba7f3e4330637da120feb62ab40d8ec5295c00e6e67a7e5cced24c4ca1471e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://fa0968b13b8d22ce3302d48fafc3e4f0fbd5541f5185a19645b06d676aeb82ce",
+				"dweb:/ipfs/QmNmRzwpVNz2j41FF1GAi3SbodAUXAkhioVUCxFzWxdCcX"
+			]
+		},
+		"hardhat/console.sol": {
+			"keccak256": "0x72b6a1d297cd3b033d7c2e4a7e7864934bb767db6453623f1c3082c6534547f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a8cb8681076e765c214e0d51cac989325f6b98e315eaae06ee0cbd5a9f084763",
+				"dweb:/ipfs/QmNWGHi4zmjxQTYN3NMGnJd49jBT5dE4bxTdWEaDuJrC6N"
+			]
+		}
+	},
+	"version": 1
+}
